@@ -1,0 +1,49 @@
+Agenda (15/06/2024-Saturday)
+----------------------------
+9.00AM  to 9.15AM   -Welcome and Kick Start
+9.15AM  to 10.15AM  -JS Introduction
+10.15AM to 10.45AM  -Primitive Datatype and variables
+10.45AM to 11.00AM  -Breakout
+11.00AM to 11.15AM  -Break
+11.15AM to 12.00AM  -let vs var vs const
+12.00AM to 12.45PM  -Operators and Conditional Statements
+12.45PM to 01.00PM  -Breakout
+01.00PM to 01.10PM  -Wrap & Assignments
+
+Goto tests-->rightClick --.newFolder as day01 -->rightClick on day01-->newFile-->variables.
+
+Js 
+primitive  and non primitive 
+var -->declare and assign the value
+  -->does not rely on the type of data to be declared
+  var variableName=value
+string
+boolean
+number
+undefined
+
+
+difference between var and let
+
+ --reassignment/redeclaration
+ --scope of the variable
+ --hoisting
+
+var 
+  -->allowed to redeclare and reassign
+  -->scope of the variable -->function scope
+  --> hoisting-->undefined 
+
+let 
+  -->not allowed to redeclare(duplicate declaration)
+  -->allowed to reassign
+  -->scope is block level /function level
+  -->hoisting -->cannot access the variable before initialization
+
+ usage -->testData
+
+const -->declare the value as constant 
+      -->cannot change the value
+      -->cannot  redeclare/reassign
+      
+usage -->browserSession id
