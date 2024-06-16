@@ -1,0 +1,47 @@
+Agenda(16-06-2024 Sunday)
+---------------------------
+9.00AM  to 9.40AM   -Conditional Statements
+9.40AM  to 10.00AM  -classroom
+10.00AM to 10.40AM  -Control Statements
+10.40AM to 11.00AM  -Breakout
+11.00AM to 11.15AM  -Break
+11.15AM to 12.00AM  -String
+12.00AM to 12.15PM  -Breakout
+12.15PM to 01.00PM  -Arrays
+01.00PM to 01.10PM  -Wrap & Assignments
+
+
+Conditional Statements
+ if else ,if else-if -->few condition
+ switch case -->Multiple condition
+
+
+break ->stop the execution
+return -->allowed to store the function output under a variable for futrure use
+
+control statements:(loop statements)
+--------------------
+for loop , while loop and do while 
+
+iteration
+
+1 to 10
+console.log(1)
+console.log(2)
+console.log(3)
+console.log(4)
+console.log(5)
+
+2 * 1=2
+
+b=10 , 15
+2*10=ans
+
+
+
+
+pagination -->while
+iteration is unknown
+
+
+String -->seq of characters
