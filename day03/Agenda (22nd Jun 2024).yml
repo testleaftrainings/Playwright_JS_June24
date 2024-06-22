@@ -1,0 +1,61 @@
+Agenda (22nd Jun 2024)
+---------------------------
+9.00AM  to 10.15AM  -Functions in Javascript
+10.15AM to 10.30AM  -Break
+10.30AM to 11.30AM  -Understanding Playwright architecture
+11.30AM to 12.15PM  -First Playwright script
+12.15PM to 12.30PM  -Classroom
+12.30PM to 1.00PM  - Basic Locators
+01.00PM to 01.10PM  -Wrap up
+
+Functions:
+---------
+ -->resusability
+ -->modularity
+
+Function Declaration
+
+ function fnName(){
+     //logic
+ }
+
+
+ Function Expression
+ const exp=function fnName(){
+  // logic
+ }
+
+ Anonymous Function 
+ -->no fnname given to the function
+function (){
+
+}
+ 
+IIF ->Immediately Invoked function
+(function(){}) ();
+
+Arrow function
+--------------
+  ->write a function in line 
+
+  ()=>console.log()
+  (a,b)=>{a+b
+  console.log("") }
+
+Asynchronous vs synchronous
+-----------------------------
+runs randomly ->async  
+step by step -->sync
+
+async -->sync
+callback, Promise
+ async and await
+
+ call back -->calling one function into another function
+ Promise 
+states:
+ pending  -inital state
+ fullfilled  -resolved //success 
+ reject -rejected //failure
+
+
