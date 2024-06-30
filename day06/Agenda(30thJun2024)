@@ -1,0 +1,66 @@
+Agenda (30th June 2024)
+----------------------
+9.00AM  to 9.30AM  -Fixtures
+9.30AM to 10.15AM  -Assertions
+10.15AM to 10.30AM -Break
+10.30AM to 11.15AM -Auto wait
+11.15AM to 11.30AM -Classroom
+11.30AM to 12.00PM -playwright Config walkthrough
+12.00PM to 12.30PM -Keyboard and mouse action
+12.45PM to 1.00PM  -Classroom
+
+Assertion
+    validate the expected output
+expect -->default wait time will be 5s
+
+Retrying assertion
+  polling time -->5s-->0.5 -->locate to validate it
+
+Non-retrying assertion
+    5s 
+
+
+Page assertion
+Locator assertion 
+API assertion
+snapshot assertion -->visual testing
+Generic assertions
+
+
+
+Hard assert -->stop the execution when the actual and expected result fails 
+soft assert -->not stop the execution when the actual and expected result fails 
+
+Multiple elements
+nth()
+first()
+last()
+filter()
+
+
+Actionability checks
+ Visible 
+ stable
+ enabled
+ receive event  -->not overlay
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://forms.office.com/r/AJ6W1yQ3kw
