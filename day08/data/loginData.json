@@ -1,0 +1,11 @@
+[
+{
+    "TestId":"TC001",
+    "username":"DemoSalesManager",
+    "password":"crmsfa"
+},{
+    "TestId":"TC002",
+    "username":"DemoCSR",
+    "password":"crmsfa"
+}
+]
