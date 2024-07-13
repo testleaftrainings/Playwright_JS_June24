@@ -1,0 +1,421 @@
+{
+	"info": {
+		"_postman_id": "786963fe-4fd5-4b30-9465-08a7255e7897",
+		"name": "Salesforce API JUN",
+		"description": "SalesForce API's to perform CRUD Operations on Leads and Accounts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23239426"
+	},
+	"item": [
+		{
+			"name": "Generate OAuth token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const res=pm.response.json();\r",
+							"const accToken=res.access_token;\r",
+							"pm.globals.set(\"Access_Token\",accToken)"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "vidya@testleaf.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Sales@123",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "a",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "3MVG9pRzvMkjMb6lZlt3YjDQwe0hk0f5ZPyWD38tfPYQ75KXUzZBGzM_c7I0o3yc6ua1IUk6lEQIy4U2sByrg",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "79FFF874D54193B377A60354C71CBBE83120AD28A5D6BC536D2F68C94645DE98",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "vidyar@testleaf.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Sales@123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://login.salesforce.com/services/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"login",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Leads",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5h0000098pgR!AQwAQP0idwIt97CUyorp0D0MedpAucX4zhivozAckPPBzreiff0K.IEERLT.jtZp9.honv5szFrWJv.MuO0u0GGsu6df7tVs",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testleaf-da-dev-ed.develop.my.salesforce.com/services/data/v61.0/sobjects/Lead",
+					"protocol": "https",
+					"host": [
+						"testleaf-da-dev-ed",
+						"develop",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v61.0",
+						"sobjects",
+						"Lead"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Lead",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5h0000098pgR!AQwAQP0idwIt97CUyorp0D0MedpAucX4zhivozAckPPBzreiff0K.IEERLT.jtZp9.honv5szFrWJv.MuO0u0GGsu6df7tVs",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"Lastname\":\"R\",\r\n    \"Company\":\"Testleaf\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testleaf-da-dev-ed.develop.my.salesforce.com/services/data/v61.0/sobjects/Lead",
+					"protocol": "https",
+					"host": [
+						"testleaf-da-dev-ed",
+						"develop",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v61.0",
+						"sobjects",
+						"Lead"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Specific Lead data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5h0000098pgR!AQwAQP0idwIt97CUyorp0D0MedpAucX4zhivozAckPPBzreiff0K.IEERLT.jtZp9.honv5szFrWJv.MuO0u0GGsu6df7tVs",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://testleaf-da-dev-ed.develop.my.salesforce.com/services/data/v61.0/sobjects/Lead/00QJ2000001kGwQMAU",
+					"protocol": "https",
+					"host": [
+						"testleaf-da-dev-ed",
+						"develop",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v61.0",
+						"sobjects",
+						"Lead",
+						"00QJ2000001kGwQMAU"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Country Field",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5h0000098pgR!AQwAQP0idwIt97CUyorp0D0MedpAucX4zhivozAckPPBzreiff0K.IEERLT.jtZp9.honv5szFrWJv.MuO0u0GGsu6df7tVs",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Country\":\"India\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testleaf-da-dev-ed.develop.my.salesforce.com/services/data/v61.0/sobjects/Lead/00QJ2000001kGwQMAU",
+					"protocol": "https",
+					"host": [
+						"testleaf-da-dev-ed",
+						"develop",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v61.0",
+						"sobjects",
+						"Lead",
+						"00QJ2000001kGwQMAU"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Lead",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5h0000098pgR!AQwAQP0idwIt97CUyorp0D0MedpAucX4zhivozAckPPBzreiff0K.IEERLT.jtZp9.honv5szFrWJv.MuO0u0GGsu6df7tVs",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://testleaf-da-dev-ed.develop.my.salesforce.com/services/data/v61.0/sobjects/Lead/00QJ2000001kGwQMAU",
+					"protocol": "https",
+					"host": [
+						"testleaf-da-dev-ed",
+						"develop",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v61.0",
+						"sobjects",
+						"Lead",
+						"00QJ2000001kGwQMAU"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5h0000098pgR!AQwAQP0idwIt97CUyorp0D0MedpAucX4zhivozAckPPBzreiff0K.IEERLT.jtZp9.honv5szFrWJv.MuO0u0GGsu6df7tVs",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Lastname\":\"Nitin\",\r\n    \"Company\":\"Wipro\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testleaf-da-dev-ed.develop.my.salesforce.com/services/data/v61.0/sobjects/Lead",
+					"protocol": "https",
+					"host": [
+						"testleaf-da-dev-ed",
+						"develop",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v61.0",
+						"sobjects",
+						"Lead"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "lead_ID",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "account_id",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}

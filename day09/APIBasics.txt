@@ -1,0 +1,166 @@
+
+Basic understanding of API
+Headers
+HTTP Methods
+Different Authentication types
+Classroom with Postman
+
+API --> Application Programming Interface 
+HTTP request & response
+
+Connects two different applications
+
+Why API automation
+------------------
+to start with the test
+Development of UI is delayed
+accuracy
+fast response
+backend test
+
+Data generation
+
+HTTP Methods - verbs
+CRUD operation:
+ Create   --Creating the new resource   --POST  
+ Read     --get/fetch the information  --GET
+ Update   --patch/put -->to partially update the fields 
+            PUT -->Full update -->if any records are not available it will create the record
+            PATCH-->partial update -->specific field of the record will be  record
+
+ Delete   --delete the resource
+
+
+Employee 
+ create information -->
+  id
+  name
+  address  -
+  phno
+  aadhar no
+
+  URL:https://dev198624.service-now.com
+
+Username: admin
+password: B6LIoxDq=r!9
+
+Authentication -->who you are? -->username and password
+Authorization -->permission -->what are you allowed to do?
+
+No Auth
+Basic Authentication : Username and password
+OAuth: Open authentication -->Singlesignon/Social signon
+  Spotify -->googleaccount --->redirected to -->google authorization url-->allow you sign in with google id in SPotify 
+
+Endpoint Url
+https://dev198624.service-now.com/api/now/table/incident/{sys_id}
+
+resource
+/incident 
+
+path parameter 
+query parameter ?  -->filter/sorting 
+
+
+https://www.amazon.in/ap/register?openid.pape.max_auth_age=0&
+
+
+salesforce
+
+https://MyDomainName.my.salesforce.com/services/data/v61.0/sobjects
+
+
+{
+"access_token": "00D5h0000098pgR!AQwAQP0idwIt97CUyorp0D0MedpAucX4zhivozAckPPBzreiff0K.IEERLT.jtZp9.honv5szFrWJv.MuO0u0GGsu6df7tVs",
+    "instance_url": "https://testleaf-da-dev-ed.develop.my.salesforce.com",
+    "id": "https://login.salesforce.com/id/00D5h0000098pgREAQ/0055h00000AnfC0AAJ",
+    "token_type": "Bearer",
+    "issued_at": "1720851095162",
+    "signature": "SchtDTy76RRu5KP2HXsLt0gmenNvZVZYlOxE0OGmtdM="
+}
+
+Endpoint url
+https://testleaf-da-dev-ed.develop.my.salesforce.com/services/data/v61.0/sobjects/Lead
+
+
+https://testleaf-da-dev-ed.develop.my.salesforce.com/services/data/v61.0/sobjects/Accounts
+
+
+HTTP Status code:
+----------------
+
+1XX ->Information
+2XX-->indicates the server response
+3XX-->indicates Redirected
+4XX-->Client side error
+5XX-->sever side 
+
+Success
+200 ok -> Get ()
+201 -->post
+204  -->Delete /Patch -->No content
+
+
+400 -->Bad request
+401 -->unauthorized
+403 -->forbidden
+404-->not found
+
+
+500-->internal server error
+501-->request is not implemented in the server
+502-->bad gateway
+503-->service unavailable
+505-->Gateway timeout
+
+Salesforce
+Post -request 
+Endpoint url :
+https://testleaf-da-dev-ed.develop.my.salesforce.com/services/data/v61.0/sobjects/Lead
+Authorization --Header 
+Key -->Authorization 
+value -->Bearer access_token
+
+
+body required -Payload
+Body  json
+{
+"Lastname":"",
+"company":""
+}
+
+Response  -->200 
+         -->data created --> {id:....}
+
+GET -all Lead Information
+https://testleaf-da-dev-ed.develop.my.salesforce.com/services/data/v61.0/sobjects/Lead
+
+GET -call for specific Lead Data
+
+https://testleaf-da-dev-ed.develop.my.salesforce.com/services/data/v61.0/sobjects/Lead/00QJ2000001kGwQMAU
+
+
+Response -->201 ok
+   -->all attributes(all fields) respect to the lead
+
+PATCH -->call to update the specific data for the created lead id
+https://testleaf-da-dev-ed.develop.my.salesforce.com/services/data/v61.0/sobjects/Lead/00QJ2000001kGwQMAU
+
+body required -Payload
+Body  -->json
+{
+
+}
+s
+DELETE  -Call to delete the specific resource
+https://testleaf-da-dev-ed.develop.my.salesforce.com/services/data/v61.0/sobjects/Lead/00QJ2000001kGwQMAU
+
+No body required-->payload
+Response --> 204 NoContent
+ verify with GET call
+ https://testleaf-da-dev-ed.develop.my.salesforce.com/services/data/v61.0/sobjects/Lead/00QJ2000001kGwQMAU
+
+Response --> 204 NoContent
+
+Account
+https://domainName.my.salesforce.com/services/data/v61.0/sobjects/Account
