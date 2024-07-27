@@ -1,0 +1,57 @@
+Today's Agenda
+--------------
+9.00AM to 10.15AM  -Class,Constructor and Object
+10.15AM to 10.30AM -Classroom
+10.30AM to 10.45AM -Break
+10.45AM to 11.30AM -AccessModifier
+11.30AM to 12.15PM -Inheritance
+12.15PM to 12.30PM -classroom
+12.30PM to 1.00PM  -Basic POM Structure
+
+
+OOPs -->Object oriented Programming 
+    
+    Why? 
+     -Modularity 
+     -Resusability(avoid duplication)
+     -Easy maintenance
+
+     Mobile -->properties/features ->functionality-->define object
+
+     Login Page -->properties ->info like credentials 
+                -->function-->action on the element
+     
+Login button /Sign up/ forget password
+
+Loginpage -->homePage-->module
+signup-->form filling-->loginpage-->hmpage
+forgot password -->mail -->login page-->hmpage
+
+class  -->properties /methods
+object
+constructor
+
+class->prototype /desighn for the defining the similar object
+object->fb login, salesforce, leaftaps
+constructor-->method to initialize objects
+
+AccessModifier: visibility of the property/method for other classes
+ seen by anyone in the media-->public
+ only to me  -->private 
+ friends /friends of friends-->protected  -->you extend the access
+ 
+private properties -->getter and setter  -->encapsulation concept
+
+get --> give access to read the variable
+set--> give access to change the definition
+
+
+ //property
+ readonly  -->keyword -->final
+ static  ->keyword that helps to share the single reference/memory to all the classes 
+
+protected accesses when the classes are connected
+ ->accessed by the child class methods
+parent class and child class config
+inheritance -->acquiring the property of parent 
+   -->is a relation between the classes  
