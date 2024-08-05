@@ -1,0 +1,76 @@
+Today's Agenda
+--------------
+9.00AM to 9.15AM   -Recap
+9.15AM to 10.15AM  -Jira Integration
+10.15AM to 10.30AM -Break
+10.30AM to 11.10AM -GeoLocation
+11.10AM to 11.50AM -DeviceEmulation
+11.50AM to 12.20PM -Network interception
+12.20PM to 12.40PM -Visual testing
+12.40PM to 1.10PM  -Github actions
+
+
+install allure report
+ commandline installation
+  add the path to the config.ts
+   open the report
+
+npm install allure-playwright
+npm install allure-commandline --save-dev
+npx allure generate allure-results --clean -o allure-report
+npx allure serve allure-results
+
+
+API  -->URI (Endpoint)  -->/rest/api/3/<resource-name> -->path
+        https://vidya-bharathi.atlassian.net/rest/api/2/issue
+ -->request body/Payload
+ -->Authorization  -->basic auth -->username -->mailId
+                                    password -->apikey
+                                           -->goto profile -->manageaccount -->privacy setting
+ATATT3xFfGF0NCgL0rKueUS-0RN5Cc8QH2wLvKaRw6LeyFB_LqiToufA3GIMj5Btx8FlnU8f38dLCvmFbEuLWcQUQVJW4x4yvZ061YuWnb2Ep9_lDfVKHHpr8snjUCSO3fmE2iPo2PIABdstdVlMNF59uPlbaUeaAfK5WCW-s4Y6xlUWEUmpALc=AE654DB4
+
+jira-client --specific library to install
+
+axios -->node -js ->3rd party api integration
+
+GeoLocation -->mocking the geolocation
+
+git hub action
+Create a new repo 
+install github action in playwright
+connect the vs code with github
+extentions :
+initialize repo
+remote repo address
+commit the changes
+publish -->push
+
+
+
+git init
+git add -add the file to push repo   staging
+git commit -m "first commit"  -->commit
+git remote add origin https://github.com/Vidyarbharathi/POMWithGIT.git
+git push -u origin main
+
+
+git pull 
+all the conflicts resolved
+git push
+
+Incoming-->team psuh
+outgoing -->your push 
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://forms.office.com/r/pmDGMVKSzW
